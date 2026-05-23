@@ -1,0 +1,20 @@
+<suite name = "Regression Suite">
+<test name = "regression test">
+<classes>
+
+<class name = "capstone_project.TestClass"/>
+<class name = "capstone_project.TestClass2"/>
+<class name = "capstone_project.TestClass3"/>
+<class name = "capstone_project.TestClass4"/>
+<class name = "capstone_project.TestClass5"/>
+
+
+</classes>
+
+
+
+</test>
+
+
+
+</suite>
