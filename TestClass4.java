@@ -10,6 +10,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
 public class TestClass4 extends BaseClass{
 	
 	//Click on the About link and verify the total number of link is Greater than 5 and print the link name
@@ -18,6 +21,13 @@ public class TestClass4 extends BaseClass{
 	@Test
 	public void ts5() {
 		
+		ExtentReports extent = ExtentManager.getReportObject();
+
+        ExtentTest test = extent.createTest("Test case 5");
+
+        System.out.println("Executing Test case 5");
+
+        
 		driver.findElement(about).click();
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -40,6 +50,11 @@ public class TestClass4 extends BaseClass{
 		for (WebElement ref : links) {
 			System.out.println(ref.getText());
 		}
+		
+		test.pass("Login Test Passed");
+
+        extent.flush();
+		
 		
 		
 	}
